@@ -1,0 +1,23 @@
+#header  {
+    border-width: 1px;
+    border-color: black;
+    background-color: lightslategray;
+    padding: 50px;
+    margin: 10px
+
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+    margin: 200px;
+    border-color: black;
+    border-width: 1px;
+    
+
+
+}
