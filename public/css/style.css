@@ -1,0 +1,17 @@
+#header  {
+    border-width: 1px;
+    border-color: black;
+    background-color: lightslategray;
+    padding: 50px;
+    margin: 10px;
+    box-shadow: 4px 4px;
+
+}
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px;
+}
+
