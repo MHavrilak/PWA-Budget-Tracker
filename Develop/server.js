@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const comression = require("compression");
+const compression = require("compression");
 
 
 const PORT = process.env.PORT || 3000;
@@ -16,14 +16,14 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://budgetdb:anasofia20@ds061365.mlab.com:61365/heroku_qmfsn7qd", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://budgetdb:anasofia20@ds061365.mlab.com:61365/heroku_qmfsn7qd", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
 
 // routes here
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+app.use(require('./routes/apiRoutes')(app));
+app.use(require('./routes/htmlRoutes')(app));
 
 
 app.listen(PORT, () => {
